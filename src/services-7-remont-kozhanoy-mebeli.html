@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Ремонт кожаной мебели"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page_services">
+
+        <article class="page__services services-page">
+          <div class="services-page__header header-page">
+            <div class="header-page__inner">
+              <h1 class="header-page__title"><span>Ремонт кожаной мебели</span></h1>
+              <span class="header-page__price">от 5000₽</span>
+            </div>
+          </div>
+          <div class="services-page__desc desc desc_7 blur">
+            <div class="desc__container">
+              <div class="desc__row">
+                <div class="desc__column desc__column_l">
+
+                  <div class="desc__body-content">
+                    <h2 class="desc__title">
+                      В компании «Как Себе» вы не только недорого отреставрируете обивку диванов, кресел или стульев, но также получите все необходимые 
+                      сопутствующие услуги по ремонту кожаной мебели на дому в мастерской.
+                    </h2>
+                    <ul class="desc__list">
+                      <li>
+                        1. Опытные мастера подберут обивку по цвету и типу вашей мебели. По желанию оставляем старый оттенок или помогаем найти материал другого 
+                        нужного цвета.
+                      </li>
+                      <li>
+                        2. После выбора материала аккуратно снимаем старую обивку и при отсутствии других видимых дефектов натягиваем на каркас заранее подготовленное 
+                        новое покрытие из кожи.
+                      </li>
+                      <li>
+                        3. Если у мебели предусмотрены трансформирующие или любые другие механизмы, мы проверяем корректность их работы. При необходимости ремонтируем 
+                        или полностью заменяем поврежденные запчасти, устраняем заедания и скрипы.
+                      </li>
+                      <li>
+                        4. Перед финальной перетяжкой также определяем степень изношенности наполнителя. Рекомендуем заменить материал, если его ресурс израсходован 
+                        более чем на 50-60%.
+                      </li>
+                      <li>
+                        5. Треснутые и надломленные элементы корпуса по вашему желанию полностью заменяем или усиливаем с помощью металлических уголков и пластин.
+                      </li>
+                      <li>
+                        6. В перечень услуг по ремонту кожаной мебели также входит замена или восстановление металлических и деревянных вставок. Детали ручной работы 
+                        не исключение.
+                      </li>
+                      <li>
+                        7. Работаем с антикварной мебелью и редкими видами предметов интерьера. При необходимости найдем и восстановим нераспространенные в наше 
+                        время наполнители, к примеру, из конского волоса.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="desc__img">
+                  <picture>
+                    <source media="(max-width:991.98px)" srcset="@img/services-page/pages/mob/7.png">
+                    <source media="(min-width:992px)" srcset="@img/services-page/pages/pc/7.png">
+                    <img src="@img/services-page/pages/mob/7.png" alt="Ремонт кожаной мебели">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+				@@include('html/sections/_our-works.htm',{})
+				@@include('html/sections/_restoration.htm',{})
+        @@include('html/sections/_what-to-do.htm',{})
+        @@include('html/sections/_process-services.htm',{})
+        @@include('html/sections/_restoration-two.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

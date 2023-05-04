@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Реставрация стульев"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page_services">
+
+        <article class="page__services services-page">
+          <div class="services-page__header header-page">
+            <div class="header-page__inner">
+              <h1 class="header-page__title"><span>Реставрация стульев</span></h1>
+              <span class="header-page__price">от 1000₽</span>
+            </div>
+          </div>
+          <div class="services-page__desc desc desc_6 blur">
+            <div class="desc__container">
+              <div class="desc__row">
+                <div class="desc__column desc__column_l">
+
+                  <div class="desc__body-content">
+                    <h2 class="desc__title">
+                      Компания “Как Себе” в Москве специализируется на ремонте и реставрации стульев на дому или в мастерской всех видов:
+                    </h2>
+                    <ul class="desc__list">
+                      <li>1. Отремонтируем деревянные и антикварные стулья.</li>
+                      <li>2. Восстановим презентабельный внешний вид барной мебели.</li>
+                      <li>3. Перетянем мягкую обшивку.</li>
+                      <li>4. Исправим дефекты офисных компьютерных и кожаных кресел.</li>
+                      <li>5. Устраним любую поломку в стульях из кухонного гарнитура.</li>
+                    </ul>
+                    
+
+                  </div>
+
+                  
+                </div>
+                <div class="desc__img">
+                  <picture>
+                    <source media="(max-width:991.98px)" srcset="@img/services-page/pages/mob/6.png">
+                    <source media="(min-width:992px)" srcset="@img/services-page/pages/pc/6.png">
+                    <img src="@img/services-page/pages/mob/6.png" alt="Реставрация стульев">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+				@@include('html/sections/_our-works.htm',{})
+				@@include('html/sections/_restoration.htm',{})
+        @@include('html/sections/_what-to-do.htm',{})
+        @@include('html/sections/_process-services.htm',{})
+        @@include('html/sections/_restoration-two.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

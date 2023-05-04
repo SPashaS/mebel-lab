@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"О Компании"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page_about">
+				<div class="page__header header-page">
+					<div class="header-page__inner">
+						<h1 class="header-page__title"><span>О Компании</span></h1>
+					</div>
+				</div>
+				@@include('html/sections/_information.htm',{})
+				@@include('html/sections/_advantages.htm',{})
+				<section class="page__about about">
+					<div class="about__container">
+						<p class="about__text">
+							И это еще не полный список тех услуг, которые мы предлагаем нашим клиентам. 
+							Более подробно вы можете узнать у наших консультантов. А наши мастера помогут 
+							сформировать заказ, опишут реальный фронт работ, помогут выбрать обивочный материал 
+							или древесину для ремонта корпусной мебели или же кухонно, определят оптимальное 
+							дизайнерское или конструктивное решение в каждом отдельном случае.
+						</p>
+						<p class="about__text">
+							Мы работаем как с частными лицами, так и с организациями различного уровня. Возможны скидки на сборку мебели и разборку при переезде.
+						</p>
+						<h2 class="about__title">
+							В зависимости от объема заказа действует гибкая система скидок.
+						</h2>
+
+						<div class="about__row">
+							<div class="about__column">
+								<div class="about__item">
+									<div class="about__item-icon">
+										<img src="@img/icons/check.svg" alt="Иконка">
+									</div>
+									<p class="about__item-text">
+										Выезд дизайнера-замерщика с образцами материалов для составления сметы и консультации по ремонту – абсолютно бесплатно.
+									</p>
+								</div>
+								<div class="about__item">
+									<div class="about__item-icon">
+										<img src="@img/icons/check.svg" alt="Иконка">
+									</div>
+									<p class="about__item-text">
+										Мы работаем по все Москве, а так же если вы проживаете в этих населенных пунктах: Химки, Мытищи, Балашиха, Люберци, Подольск, Одинцова, Зеленоград и др.
+									</p>
+								</div>
+							</div>
+							<div class="about__column">
+								<div class="about__item">
+									<div class="about__item-icon">
+										<img src="@img/icons/check.svg" alt="Иконка">
+									</div>
+									<p class="about__item-text">
+										Гарантия – 6 месяцев
+									</p>
+								</div>
+								<div class="about__item">
+									<div class="about__item-icon">
+										<img src="@img/icons/check.svg" alt="Иконка">
+									</div>
+									<p class="about__item-text">
+										Оформление заказа по договору
+									</p>
+								</div>
+								<div class="about__item">
+									<div class="about__item-icon">
+										<img src="@img/icons/check.svg" alt="Иконка">
+									</div>
+									<p class="about__item-text">
+										Наличная и безналичная форма оплаты
+									</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</section>
+
+				
+				@@include('html/sections/_restoration.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

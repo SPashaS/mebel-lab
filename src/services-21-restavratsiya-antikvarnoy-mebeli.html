@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Реставрация антикварной мебели"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page_services">
+
+        <article class="page__services services-page">
+          <div class="services-page__header header-page">
+            <div class="header-page__inner">
+              <h1 class="header-page__title"><span>Реставрация антикварной</span><br><span>мебели</span></h1>
+              <span class="header-page__price">от 3000₽</span>
+            </div>
+          </div>
+          <div class="services-page__desc desc desc_21 blur">
+            <div class="desc__container">
+              <div class="desc__row">
+                <div class="desc__column desc__column_m">
+
+                  <div class="desc__body-content">
+                    <h2 class="desc__title">
+                      Какие виды реставрации антикварной мебели на дому или в мастерской доверяют мастерам из 
+                      «Mebel LAB» в Москве и области:
+                    </h2>
+                    <ul class="desc__list">
+                      <li>・ Восстановление деревянной мебели почтенного возраста</li>
+                      <li>・ Подбор старинной фурнитуры для последующей замены</li>
+                      <li>・ Ремонт каркаса, крепежных элементов и механизмов, а также замена обивки стульев, банкеток и кресел</li>
+                      <li>・ Обновление покрытия с использованием лака, мебельного масла, шеллака и воска.</li>
+                      <li>・ Изготовление петель, обивочных гвоздиков и других металлических крепежей.</li>
+                      <li>・ Воссоздание декоративных элементов, резьбы и деревянных фигур</li>
+                      <li>・ Реставрация редкого антиквариата без ограничений по стилю, сложности и специфике эпохи.</li>
+                      <li>・ Обновление шпона старинной мебели</li>
+                      <li>・ Восстановление религиозного антиквариата</li>
+                    </ul>
+                  </div>
+                  
+                </div>
+                <div class="desc__img">
+                  <picture>
+                    <source media="(max-width:991.98px)" srcset="@img/services-page/pages/mob/21.png">
+                    <source media="(min-width:992px)" srcset="@img/services-page/pages/pc/21.png">
+                    <img src="@img/services-page/pages/mob/21.png" alt="Реставрация антикварной мебели">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+				@@include('html/sections/_our-works.htm',{})
+				@@include('html/sections/_restoration.htm',{})
+        @@include('html/sections/_what-to-do.htm',{})
+        @@include('html/sections/_process-services.htm',{})
+        @@include('html/sections/_restoration-two.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

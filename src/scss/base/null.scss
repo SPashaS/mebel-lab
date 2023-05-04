@@ -22,10 +22,11 @@ body {
 	min-width: $minWidth + px;
 }
 body {
-	color: $mainColor;
-	line-height: 1;
+	color: var(--text-color);
+	line-height: 1.1875;
 	font-family: $fontFamily;
 	font-size: $fontSize;
+	font-weight: 600;
 	//text-rendering: optimizeLegibility;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;

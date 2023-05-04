@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Замена наполнителя"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page_services">
+
+        <article class="page__services services-page">
+          <div class="services-page__header header-page">
+            <div class="header-page__inner">
+              <h1 class="header-page__title"><span>Замена наполнителя</span></h1>
+              <span class="header-page__price">от 600₽</span>
+            </div>
+          </div>
+          <div class="services-page__desc desc desc_8 blur">
+            <div class="desc__container">
+              <div class="desc__row">
+                <div class="desc__column desc__column_l">
+
+                  <div class="desc__body-content">
+                    <h2 class="desc__title">С какими проблемами к нам обращаются большинство клиентов?</h2>
+                    <ul class="desc__list">
+                      <li>
+                        1. Замена поролона или другого наполнителя на дому или в мастерской в Москве и области. Выполняется только вместе с обновлением обивки, 
+                      потому что снять и натянуть старое покрытие второй раз нереально, с технической точки зрения.
+                      </li>
+                      <li>
+                        2. Перетяжка мебели тканью, кожей или дерматином выбранного вами цвета с параллельной заменой прохудившегося наполнителя.
+                      </li>
+                      <li>
+                        3. Восстановление, ремонт или полное обновление пружинных блоков.
+                      </li>
+                      <li>
+                        4. Обновление отдельных участков, где есть резаный поролон или наполнитель с другими дефектами, ограниченными определенной областью.
+                      </li>
+                    </ul>
+                  </div>
+                  
+                </div>
+                <div class="desc__img">
+                  <picture>
+                    <source media="(max-width:991.98px)" srcset="@img/services-page/pages/mob/8.png">
+                    <source media="(min-width:992px)" srcset="@img/services-page/pages/pc/8.png">
+                    <img src="@img/services-page/pages/mob/8.png" alt="Замена наполнителя">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+				@@include('html/sections/_our-works.htm',{})
+				@@include('html/sections/_restoration.htm',{})
+        @@include('html/sections/_what-to-do.htm',{})
+        @@include('html/sections/_process-services.htm',{})
+        @@include('html/sections/_restoration-two.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

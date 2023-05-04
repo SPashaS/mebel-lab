@@ -6,7 +6,438 @@
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
-			<main class="page">
+			<main class="page page_home">
+				<section class="page__main main-block">
+					<div class="main-block__container">
+						<div class="main-block__body">
+							<div class="main-block__header header-block">
+								<h1 class="header-block__title">
+									<span>Реставрация и</span><br>
+									<span>перетяжка</span><br>
+									<span>мебели</span>
+								</h1>
+								<p class="header-block__subtitle">
+									погрузка и доставка в мастерскую бесплатно
+								</p>
+							</div>
+							<div class="main-block__image">
+								<img src="img/home/main.jpg" alt="Реставрация и перетяжка мебели">
+							</div>
+							<ul class="main-block__advantages-list advantages-list">
+								<li class="advantages-list__item">
+									<img src="img/location.svg" alt="Локация">
+									<p>
+										Работаем в Москве и Московской области
+									</p>
+								</li>
+								<li class="advantages-list__item">
+									<img src="img/license.svg" alt="Гарантия">
+									<p>
+										Даем гарантию от 1 до 3 лет
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				@@include('html/sections/_restoration.htm',{})
+				@@include('html/sections/_information.htm',{})
+
+	
+				<section class="page__services services">
+					<div class="services__container">
+						<div class="services__block-header block-header">
+							<span class="block-header__subtitle">Услуги</span>
+							<h2 class="block-header__title">Предоставляем все виды работ по ремонту и восстановлению мебели</h2>
+						</div>
+						<div class="services__body cards">
+							<ul class="cards__column cards__column_1 cards__column_home">
+								<li class="card">
+									<a href="services-2-restavratsiya-mebeli.html" class="card__body-link">
+										<h3 class="card__title">Реставрация мебели</h3>
+										<div class="card__image card__image_right">
+											<picture>
+												<source media="(max-width:767.98px)" srcset="img/services/mob/1.png">
+												<source media="(min-width:768px)" srcset="img/services/pc/1.png">
+												<img src="img/services/mob/1.png" alt="Реставрация мебели">
+											</picture>
+										</div>
+									</a>
+								</li>
+								<li class="card" data-da=".cards__column_2,767.98">
+									<a href="services-3-restavratsiya-derevyannoy-mebeli.html" class="card__body-link">
+										<h3 class="card__title">Реставрация деревянной мебели</h3>
+										<div class="card__image">
+											<picture>
+												<source media="(max-width:767.98px)" srcset="img/services/mob/2.png">
+												<source media="(min-width:768px)" srcset="img/services/pc/2.png">
+												<img src="img/services/mob/2.png" alt="Реставрация деревянной мебели">
+											</picture>
+										</div>
+									</a>
+								</li>
+								<li class="card" data-da=".cards__column_3,767.98">
+									<a href="services-5-restavratsiya-antikvariata.html" class="card__body-link">
+										<h3 class="card__title">Реставрация антиквариата</h3>
+										<div class="card__image">
+											<picture>
+												<source media="(max-width:767.98px)" srcset="img/services/mob/3.png">
+												<source media="(min-width:768px)" srcset="img/services/pc/3.png">
+												<img src="img/services/mob/3.png" alt="Реставрация антиквариата">
+											</picture>
+										</div>
+									</a>
+								</li>
+								<li class="card">
+									<a href="services-4-perekleyka-shpona.html" class="card__body-link">
+										<h3 class="card__title">Переклейка шпона</h3>
+										<div class="card__image card__image_right">
+											<picture>
+												<source media="(max-width:767.98px)" srcset="img/services/mob/4.png">
+												<source media="(min-width:768px)" srcset="img/services/pc/4.png">
+												<img src="img/services/mob/4.png" alt="Переклейка шпона">
+											</picture>
+										</div>
+									</a>
+								</li>
+								<li class="card" data-da=".cards__column_2,767.98">
+									<a href="services-1-peretyazhja-mebeli.html" class="card__body-link">
+										<h3 class="card__title">Перетяжка мебели</h3>
+										<div class="card__image">
+											<picture>
+												<source media="(max-width:767.98px)" srcset="img/services/mob/5.png">
+												<source media="(min-width:768px)" srcset="img/services/pc/5.png">
+												<img src="img/services/mob/5.png" alt="Перетяжка мебели">
+											</picture>
+										</div>
+									</a>
+								</li>
+								<li class="card" data-da=".cards__column_2,767.98,last">
+									<a href="services-8-zamena-napolnitelya.html" class="card__body-link">
+										<h3 class="card__title">Замена наполнителя</h3>
+										<div class="card__image card__image_right">
+											<picture>
+												<source media="(max-width:767.98px)" srcset="img/services/mob/6.png">
+												<source media="(min-width:768px)" srcset="img/services/pc/6.png">
+												<img src="img/services/mob/6.png" alt="Замена наполнителя">
+											</picture>
+										</div>
+									</a>
+								</li>
+								<li class="card">
+									<a href="services-7-remont-kozhanoy-mebeli.html" class="card__body-link">
+										<h3 class="card__title">Ремонт кожаной мебели</h3>
+										<div class="card__image card__image_right">
+											<picture>
+												<source media="(max-width:767.98px)" srcset="img/services/mob/7.png">
+												<source media="(min-width:768px)" srcset="img/services/pc/7.png">
+												<img src="img/services/mob/7.png" alt="Ремонт кожаной мебели">
+											</picture>
+										</div>
+									</a>
+								</li>
+								<li class="card" data-da=".cards__column_3,767.98">
+									<a href="services-6-restavratsiya-stulyev.html" class="card__body-link">
+										<h3 class="card__title">Реставрация стульев</h3>
+										<div class="card__image">
+											<picture>
+												<source media="(max-width:767.98px)" srcset="img/services/mob/8.png">
+												<source media="(min-width:768px)" srcset="img/services/pc/8.png">
+												<img src="img/services/mob/8.png" alt="Реставрация стульев">
+											</picture>
+										</div>
+									</a>
+								</li>
+								<li class="card" data-da=".cards__column_3,767.98,last">
+									<a href="services-9-izgotovleniye-myagkoy-mebeli-pod-zakaz.html" class="card__body-link">
+										<h3 class="card__title">Изготовление мягкой мебели под заказ</h3>
+										<div class="card__image card__image_left">
+											<picture>
+												<source media="(max-width:767.98px)" srcset="img/services/mob/9.png">
+												<source media="(min-width:768px)" srcset="img/services/pc/9.png">
+												<img src="img/services/mob/9.png" alt="Изготовление мягкой мебели под заказ">
+											</picture>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="cards__column cards__column_2"></ul>
+							<ul class="cards__column cards__column_3"></ul>
+						</div>
+	
+	
+						<a href="services.html" class="services__button button button_center">Все услуги</a>
+					</div>
+				</section>
+	
+				@@include('html/sections/_advantages.htm',{})
+				
+				<section class="page__reviews reviews">
+					<div class="reviews__container">
+						<div class="reviews__block-header block-header">
+							<span class="block-header__subtitle">Отзывы</span>
+							<h2 class="block-header__title">Почему наши клиенты редко покупают новую мебель</h2>
+						</div>
+						<div class="reviews__body">
+							<div class="reviews__item item-reviews">
+								<div class="item-reviews__date">22 сентября 2021</div>
+								<div class="item-reviews__body">
+									<p class="item-reviews__text">
+										Вчера доставили мой мягкий уголок и две подушки в подарок. Ремонт мебели
+										производился в мастерской. Делали спинки и боковушки более объемными, а
+										в качестве обивочного материала мною была выбрана эко кожа. По стоимости
+										получилось в разы дешевле, чем купить новую мебель такого плана. К качеству
+										вопросов нет, смотрится дорого, аккуратно и очень красиво. Безусловно, я
+										рада, что перетяжку делали именно в этой компании.
+									</p>
+									<img class="item-reviews__image" src="img/reviews/1.png" alt="Реставрация кресла">
+								</div>
+							</div>
+							<div class="reviews__item item-reviews">
+								<div class="item-reviews__date">04 мая 2020</div>
+								<div class="item-reviews__body">
+									<p class="item-reviews__text">
+										Нашел эту компанию через интернет. До этого ещё обращался в
+										несколько фирм, но там озвучивали сроки на перетяжку дивана в приделах месяца и более,
+										а требовалось срочно. Сделали прикольно и быстро, всего дней 10 понадобилось. Сразу видно, когда у мастера руки откуда нужно растут.)) Жена
+										очень довольна новой обивкой и внешним видом.
+									</p>
+								</div>
+							</div>
+							<div class="reviews__item item-reviews">
+								<div class="item-reviews__date">22 апреля 2020</div>
+								<div class="item-reviews__body">
+									<p class="item-reviews__text">
+										Очень квалифицированные специалисты в своей области. Перетягивали диван
+										экокожей с велюровыми вставками. Помогли подобрать обивку и рассказали о
+										каждом материале очень подробно. Чувствуется профессионализм и вкус в сфере
+										изменения дизайна мебели и замены обивочных материалов.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="page__price price">
+					<div class="price__container">
+						<div class="price__block-header block-header">
+							<span class="block-header__subtitle">Стоимость</span>
+							<h2 class="block-header__title">Качественный ремонт мебели доступнее, чем кажется</h2>
+						</div>
+						<div class="price__body cards-price">
+							<ul class="cards-price__column">
+								<li class="cards-price__item card-price">
+									<div class="card-price__body">
+										<h3 class="card-price__title">Обивка стула</h3>
+										<span class="card-price__price">от 500 ₽</span>
+										<div class="card-price__image">
+											<picture>
+												<source media="(max-width:767.98px)" srcset="img/price/mob/1.png">
+												<source media="(min-width:768px)" srcset="img/price/pc/1.png">
+												<img src="img/price/mob/1.png" alt="Обивка стула">
+											</picture>
+										</div>
+									</div>
+								</li>
+								<li class="cards-price__item card-price">
+									<div class="card-price__body">
+										<h3 class="card-price__title">Ремонт мягкой мебели</h3>
+										<span class="card-price__price">от 3500 ₽</span>
+										<div class="card-price__image">
+											<picture>
+												<source media="(max-width:767.98px)" srcset="img/price/mob/2.png">
+												<source media="(min-width:768px)" srcset="img/price/pc/2.png">
+												<img src="img/price/mob/2.png" alt="Ремонт мягкой мебели">
+											</picture>
+										</div>
+									</div>
+								</li>
+								<li class="cards-price__item card-price">
+									<div class="card-price__body">
+										<h3 class="card-price__title">Ремонт софы</h3>
+										<span class="card-price__price">от 2000 ₽</span>
+										<div class="card-price__image">
+											<picture>
+												<source media="(max-width:767.98px)" srcset="img/price/mob/3.png">
+												<source media="(min-width:768px)" srcset="img/price/pc/3.png">
+												<img src="img/price/mob/3.png" alt="Ремонт софы">
+											</picture>
+										</div>
+									</div>
+								</li>
+								<li class="cards-price__item card-price">
+									<div class="card-price__body">
+										<h3 class="card-price__title">Обивка и перетяжка</h3>
+										<span class="card-price__price">от 1500 ₽</span>
+										<div class="card-price__image card-price__image_right">
+											<picture>
+												<source media="(max-width:767.98px)" srcset="img/price/mob/4.png">
+												<source media="(min-width:768px)" srcset="img/price/pc/4.png">
+												<img src="img/price/mob/4.png" alt="Обивка и перетяжка">
+											</picture>
+										</div>
+									</div>
+								</li>
+								<li class="cards-price__item card-price">
+									<div class="card-price__body">
+										<h3 class="card-price__title">Ремонт мягкого уголка</h3>
+										<span class="card-price__price">от 1200 ₽</span>
+										<div class="card-price__image card-price__image_left">
+											<picture>
+												<source media="(max-width:767.98px)" srcset="img/price/mob/5.png">
+												<source media="(min-width:768px)" srcset="img/price/pc/5.png">
+												<img src="img/price/mob/5.png" alt="Ремонт мягкого уголка">
+											</picture>
+										</div>
+									</div>
+								</li>
+								<li class="cards-price__item card-price">
+									<div class="card-price__body">
+										<h3 class="card-price__title">Ремонт мебельного гарнитура</h3>
+										<span class="card-price__price">от 4000 ₽</span>
+										<div class="card-price__image card-price__image_right">
+											<picture>
+												<source media="(max-width:767.98px)" srcset="img/price/mob/6.png">
+												<source media="(min-width:768px)" srcset="img/price/pc/6.png">
+												<img src="img/price/mob/6.png" alt="Ремонт мебельного гарнитура">
+											</picture>
+										</div>
+									</div>
+								</li>
+								<li class="cards-price__item card-price">
+									<div class="card-price__body">
+										<h3 class="card-price__title">Дополнительные работы</h3>
+										<span class="card-price__price">от 300 ₽</span>
+										<div class="card-price__image">
+											<picture>
+												<source media="(max-width:767.98px)" srcset="img/price/mob/7.png">
+												<source media="(min-width:768px)" srcset="img/price/pc/7.png">
+												<img src="img/price/mob/7.png" alt="Дополнительные работы">
+											</picture>
+										</div>
+									</div>
+								</li>
+								<li class="cards-price__item card-price">
+									<div class="card-price__body">
+										<h3 class="card-price__title">Ремонт компьютерного кресла</h3>
+										<span class="card-price__price">от 1500 ₽</span>
+										<div class="card-price__image card-price__image_right">
+											<picture>
+												<source media="(max-width:767.98px)" srcset="img/price/mob/8.png">
+												<source media="(min-width:768px)" srcset="img/price/pc/8.png">
+												<img src="img/price/mob/8.png" alt="Ремонт компьютерного кресла">
+											</picture>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<a href="#" class="price__button button button_center">Полный прайс-лист</a>
+	
+	
+					</div>
+				</section>
+
+				<section class="page__process process">
+					<div class="process__container">
+						<div class="process__block-header block-header">
+							<span class="block-header__subtitle">Процесс</span>
+							<h2 class="block-header__title">Как заказать ремонт, реставрацию или переобтяжку мебели</h2>
+						</div>
+					</div>
+					<div class="process__wrapper blur">
+						<div class="process__container">
+							<div class="phone-block">
+								<div class="phone-block__main-item phone-block__main-item_v1">
+									<div class="phone-block__wrapper">
+										<div class="grid-num-item grid-num-item_s">
+											<span class="grid-num-item__number">1</span>
+											<p class="grid-num-item__text">
+												Позвоните или подайте заявку на сайте.
+											</p>
+										</div>
+										<div class="phone-block__image">
+											<picture>
+												<source media="(max-width:991.98px)" srcset="img/common/support-mob.png">
+												<source media="(min-width:992px)" srcset="img/common/support-pc.png">
+												<img src="img/common/support-mob.png" alt="Реставрация деревянной мебели">
+											</picture>
+										</div>
+	
+										<a href="#" class="phone-block__button button button_center">Обратный звонок</a>
+									</div>
+								</div>
+								<div class="phone-block__grid-num grid-num grid-num_process">
+									<div class="grid-num-item grid-num-item_s">
+										<span class="grid-num-item__number">2</span>
+										<p class="grid-num-item__text">
+											Вызовите бесплатно мастера в удобное для вас время.
+										</p>
+									</div>
+									<div class="grid-num-item grid-num-item_s">
+										<span class="grid-num-item__number">3</span>
+										<p class="grid-num-item__text">
+											Изучите и выберите материал для ремонта.
+										</p>
+									</div>
+									<div class="grid-num-item grid-num-item_s">
+										<span class="grid-num-item__number">4</span>
+										<p class="grid-num-item__text">
+											Подпешите договор. (Мы работаем без предоплаты).
+										</p>
+									</div>
+									<div class="grid-num-item grid-num-item_s">
+										<span class="grid-num-item__number">5</span>
+										<p class="grid-num-item__text">
+											Передайте мебель грузчикам в удобное для вас время.
+										</p>
+									</div>
+									<div class="grid-num-item grid-num-item_s">
+										<span class="grid-num-item__number">6</span>
+										<p class="grid-num-item__text">
+											Дождитесь звонка и согласуйте удобное время обратной доставки.
+										</p>
+									</div>
+									<div class="grid-num-item grid-num-item_s">
+										<span class="grid-num-item__number">7</span>
+										<p class="grid-num-item__text">
+											Примите заказ, оплатите, получите гарантию и наслаждайтесь обнавленной мебелью.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="page__delivery delivery">
+					<div class="delivery__container">
+						<div class="delivery__block-header block-header">
+							<span class="block-header__subtitle">Доставка</span>
+						</div>
+						<div class="delivery__body">
+							<div class="delivery__image">
+								<picture>
+									<source media="(max-width:767.98px)" srcset="img/delivery/mob.png">
+									<source media="(min-width:768px)" srcset="img/delivery/pc.png">
+									<img src="img/delivery/mob.png" alt="Доставка мебели">
+								</picture>
+							</div>
+							<div class="delivery__information">
+								<h2 class="delivery__title">
+									Погрузим и отвезем мебель в мастерскую бесплатно
+								</h2>
+								<p class="delivery__text">
+									Мы работаем по все Москве, а так же если вы проживаете
+									в этих населенных пунктах: Химки, Мытищи, Балашиха, Люберци, Подольск,
+									Одинцова, Зеленоград и др.
+								</p>
+								<a href="#" class="delivery__button button button_center">Заказать бесплатную доставку</a>
+							</div>
+						</div>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

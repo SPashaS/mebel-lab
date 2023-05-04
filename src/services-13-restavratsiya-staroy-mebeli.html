@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Реставрация старой мебели"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page_services">
+
+        <article class="page__services services-page">
+          <div class="services-page__header header-page">
+            <div class="header-page__inner">
+              <h1 class="header-page__title"><span>Реставрация старой мебели</span></h1>
+              <span class="header-page__price">по запросу</span>
+            </div>
+          </div>
+          <div class="services-page__desc desc desc_13 blur">
+            <div class="desc__container">
+              <div class="desc__row desc__row_pleft">
+                <div class="desc__column desc__column_m">
+
+                  <div class="desc__body-content">
+                    <h2 class="desc__title">Основа процесса - подготовка</h2>
+                    <p class="desc__text">
+                      Независимо от того, к какой категории относится мебель, ее реставрация требует тщательной 
+                      подготовки. Это поможет улучшить итоговый результат. Выполняется такая подготовка в 
+                      определенной последовательности:
+                    </p>
+                    <ul class="desc__list">
+                      <li>・ проводится тщательный осмотр для выявления дефектов и повреждения;</li>
+                      <li>・ удаляются с поверхности загрязнения и пыль;</li>
+                      <li>・ проводится демонтаж.</li>
+                    </ul>
+                    <p class="desc__text">
+                      Особенности реставрационного процесса<br>
+                      После того, как мебель подготовлена к дальнейшим работам, с деревянных ее частей удаляется 
+                      лакокрасочное покрытие. Проявившиеся дефекты в виде трещин и царапин устраняются. 
+                      Для удаления сколов и глубоких зазоров используют шпатлевку.<br>
+                      После чего приступают к лакокрасочным работам. Предварительно поверхность тщательно грунтуют - 
+                      это улучшает адгезию, уменьшает расход краски. Наносят необходимое количество слоев красящего 
+                      состава. Завершается реставрация старой мебели лакировкой поверхности.
+                    </p>
+                  </div>
+
+                </div>
+                <div class="desc__img">
+                  <picture>
+                    <source media="(max-width:991.98px)" srcset="@img/services-page/pages/mob/13.png">
+                    <source media="(min-width:992px)" srcset="@img/services-page/pages/pc/13.png">
+                    <img src="@img/services-page/pages/mob/13.png" alt="Реставрация старой мебели">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+				@@include('html/sections/_our-works.htm',{})
+				@@include('html/sections/_restoration.htm',{})
+        @@include('html/sections/_what-to-do.htm',{})
+        @@include('html/sections/_process-services.htm',{})
+        @@include('html/sections/_restoration-two.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>
