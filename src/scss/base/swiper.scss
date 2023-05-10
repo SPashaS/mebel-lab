@@ -1,3 +1,11 @@
+.swiper-horizontal {
+	touch-action: pan-y;
+}
+.swiper-vertical {
+	touch-action: pan-x;
+}
+
+//////////////////
 .swiper {
 	overflow: hidden;
 }
@@ -21,7 +29,7 @@
 .swiper-initialized {
 	.swiper-slide {
 		flex-shrink: 0;
-		// transition-property: transform;
+		transition-property: transform;
 	}
 }
 .swiper-android {
@@ -33,3 +41,5 @@
 .swiper-button-lock {
 	display: none !important;
 }
+
+

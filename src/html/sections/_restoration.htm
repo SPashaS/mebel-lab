@@ -1,4 +1,4 @@
-<section class="restoration blur">
+<section class="restoration blur" id="restoration">
   <div class="restoration__container">
     <div class="restoration__body">
       <div class="restoration__column">
@@ -10,36 +10,39 @@
         </p>
       </div>
       <div class="restoration__column">
-        <form action="#" class="restoration__form form" data-dev>
+        <form class="restoration__form form" data-ajax action="#" data-popup-message="#thank">
           <div class="form__phone-number">
-            <input type="tel" placeholder="Телефон" required>
+            <input type="tel" placeholder="Телефон" required name="tel" aria-label="Введите номер вашего телефона" data-required="tel">
           </div>
           <div class="form__body">
             <div class="form__items">
               <div class="form__item form__item_add">
-                <input accept=".jpg, .png, .gif" type="file" id="formPhoto1" name="photo1">
+                <input accept=".jpg, .png, .gif" type="file" name="photo[]" aria-label="Добавить фотографию вашей мебели">
                 <div class="form__item-preview"></div>
               </div>
               <div class="form__item form__item_add">
-                <input accept=".jpg, .png, .gif" type="file" id="formPhoto2" name="photo2">
+                <input accept=".jpg, .png, .gif" type="file" name="photo[]" aria-label="Добавить фотографию вашей мебели">
                 <div class="form__item-preview"></div>
               </div>
               <div class="form__item form__item_add">
-                <input accept=".jpg, .png, .gif" type="file" id="formPhoto3" name="photo3">
+                <input accept=".jpg, .png, .gif" type="file" name="photo[]" aria-label="Добавить фотографию вашей мебели">
                 <div class="form__item-preview"></div>
               </div>
               <div class="form__item form__item_add">
-                <input accept=".jpg, .png, .gif" type="file" id="formPhoto4" name="photo4">
+                <input accept=".jpg, .png, .gif" type="file" name="photo[]" aria-label="Добавить фотографию вашей мебели">
                 <div class="form__item-preview"></div>
               </div>
               <div class="form__item form__item_add">
-                <input accept=".jpg, .png, .gif" type="file" id="formPhoto5" name="photo5">
+                <input accept=".jpg, .png, .gif" type="file" name="photo[]" aria-label="Добавить фотографию вашей мебели">
                 <div class="form__item-preview"></div>
               </div>
             </div>
             <div class="form__footer">
               <span>Прикрепить фото</span>
-              <button class="form__submit button" type="submit">Отправить</button>
+              <button class="form__submit button" type="submit">
+                <span>Отправить</span>
+                <img src="@img/icons/loading.gif" alt="Загрузка">
+              </button>
             </div>
           </div>
 

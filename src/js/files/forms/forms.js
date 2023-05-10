@@ -83,7 +83,19 @@ export let formValidate = {
 			} else {
 				this.removeError(formRequiredItem);
 			}
-		} else if (formRequiredItem.type === "checkbox" && !formRequiredItem.checked) {
+		} 
+		//
+		else if (formRequiredItem.dataset.required === "tel") {
+			formRequiredItem.value = formRequiredItem.value.replace(" ", "");
+			if (this.telTest(formRequiredItem)) {
+				this.addError(formRequiredItem);
+				error++;
+			} else {
+				this.removeError(formRequiredItem);
+			}
+		}
+		//
+		else if (formRequiredItem.type === "checkbox" && !formRequiredItem.checked) {
 			this.addError(formRequiredItem);
 			error++;
 		} else {
@@ -142,6 +154,9 @@ export let formValidate = {
 	},
 	emailTest(formRequiredItem) {
 		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
+	}, 
+	telTest(formRequiredItem) {
+		return !/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){7,14}(\s*)?$/.test(formRequiredItem.value);
 	}
 }
 /* Отправка форм */
@@ -169,22 +184,58 @@ export function formSubmit(validate) {
 			if (ajax) { // Если режим ajax
 				e.preventDefault();
 				const formAction = form.getAttribute('action') ? form.getAttribute('action').trim() : '#';
-				const formMethod = form.getAttribute('method') ? form.getAttribute('method').trim() : 'GET';
-				const formData = new FormData(form);
+				// const formMethod = form.getAttribute('method') ? form.getAttribute('method').trim() : 'GET';
 
-				form.classList.add('_sending');
-				const response = await fetch(formAction, {
-					method: formMethod,
-					body: formData
-				});
-				if (response.ok) {
-					let responseResult = await response.json();
-					form.classList.remove('_sending');
-					formSent(form);
-				} else {
-					alert("Ошибка");
-					form.classList.remove('_sending');
+				let formData = new FormData(form);
+
+				let xhr = new XMLHttpRequest();
+
+
+
+
+				form.classList.add('form_sending');
+				xhr.onreadystatechange = function () {
+					if (xhr.readyState === 4) {
+						//
+						// console.log('Отправка');
+						//
+						if(xhr.status === 200) {
+							formSent(form);
+							// console.log('Отправлено!');
+							// alert("Спасибо за обращение! Мы скоро с вами свяжемся!")
+							//
+							form.classList.remove('form_sending');
+							//
+							
+
+						} else { 
+							// console.log('Ошибка'); 
+							//
+							form.classList.remove('form_sending');
+						}
+					}
 				}
+
+				xhr.open('POST', 'sendmail.php', true);
+				xhr.send(formData);
+				form.reset();
+				///////////////
+
+
+				// form.classList.add('_sending');
+				// const response = await fetch(formAction, {
+				// 	method: formMethod,
+				// 	body: formData
+				// });
+				// if (response.ok) {
+				// 	let responseResult = await response.json();
+				// 	form.classList.remove('_sending');
+				// 	formSent(form);
+				// } else {
+				// 	alert("Ошибка");
+				// 	form.classList.remove('_sending');
+				// }
+
 			} else if (form.hasAttribute('data-dev')) {	// Если режим разработки
 				e.preventDefault();
 				formSent(form);
@@ -217,6 +268,13 @@ export function formSubmit(validate) {
 		formValidate.formClean(form);
 		// Сообщаем в консоль
 		formLogging(`Форма отправлена!`);
+		// сброс превию после отправки
+		const addedImages = document.querySelectorAll(".form__item_ok");
+		addedImages.forEach(element => {
+			element.classList.remove("form__item_ok");
+			element.classList.add("form__item_add");
+			element.lastElementChild.innerHTML = ``;
+		});
 	}
 	function formLogging(message) {
 		FLS(`[Формы]: ${message}`);

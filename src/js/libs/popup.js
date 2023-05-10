@@ -325,7 +325,9 @@ class Popup {
 		if (!this.isOpen && this.lastFocusEl) {
 			this.lastFocusEl.focus();
 		} else {
-			focusable[0].focus();
+			if(focusable[0]) {
+				focusable[0].focus();
+			}
 		}
 	}
 	// Функция вывода в консоль

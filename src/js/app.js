@@ -26,7 +26,7 @@ import * as flsFunctions from "./files/functions.js";
 /* (i) необходимо для корректного отображения webp из css  */
 flsFunctions.isWebp();
 /* Добавление класса touch для HTML если браузер мобильный */
-// flsFunctions.addTouchClass();
+flsFunctions.addTouchClass();
 /* Добавление loaded для HTML после полной загрузки страницы */
 // flsFunctions.addLoadedClass();
 /* Модуль для работы с меню (Бургер) */
@@ -60,7 +60,7 @@ flsFunctions.menuInit();
 Документация по работе в шаблоне:
 Сниппет (HTML): pl
 */
-// import './libs/popup.js'
+import './libs/popup.js'
 
 /*
 Модуль параллакса мышью
@@ -79,6 +79,7 @@ import * as flsForms from "./files/forms/forms.js";
 
 /* Oтправка формы со встроенной валидацией полей. false - отключит валидацию */
 flsForms.formSubmit(true);
+
 
 /* Модуль формы "колличество" */
 // flsForms.formQuantity();

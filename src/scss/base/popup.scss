@@ -20,7 +20,7 @@ body.popup-show::after {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	padding: 30px 10px;
+	padding: rem(30) rem(10);
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
@@ -51,11 +51,15 @@ body.popup-show::after {
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
 	background-color: #eee;
-	padding: 20px;
+	padding: rem(20);
 	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
+	max-width: rem(900);
+	border-radius: rem(20);
+	text-align: center;
 	.lock & {
 		visibility: visible;
+	}
+	@media (min-width:$tablet){
+		  font-size: rem(23);
 	}
 }

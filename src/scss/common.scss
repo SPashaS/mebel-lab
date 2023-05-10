@@ -1,9 +1,7 @@
 // Заголовки, общие БЄМ блоки и проче...
 // Заголовки, общие БЄМ блоки и проче...
 
-// .cards__column:first-child {
-//   padding-top: rem(30);
-// }
+
 
 
 
@@ -177,7 +175,7 @@ h3 {
       column-gap: var(--column-gap-mob);
     }
     @media (min-width:$mobileSmall){
-      .card {
+      .card .card__body-link{
         min-height: rem(180);
       }
     }
@@ -284,12 +282,11 @@ h3 {
   background: rgba(96, 156, 164, 0.1);
   box-shadow: 0 rem(1) rem(1) rgba(0, 0, 0, 0.25);
   border-radius: rem(0.5);
-  min-height: rem(140);
   transition: all 0.3s ease 0s;
   @media (min-width:$tablet){
     box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.25);
     border-radius: rem(2);
-    height: rem(335);
+    
   }
   @media (any-hover: hover) {
 		&:hover {
@@ -305,7 +302,10 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    min-height: rem(140);
+    @media (min-width:$tablet){
+      min-height: rem(335); 
+    }
   }
 
   // .card__title
@@ -419,6 +419,9 @@ h3 {
       max-width: rem(1300);
       margin: 0 auto;
     }
+    @media (min-width:$pcSmall){
+      padding: 0 rem(15) 0 rem(105);
+    }
   }
 
 
@@ -463,11 +466,12 @@ h3 {
     }
 
     &:last-child {
-      @media (min-width:$mobile) {
+      @media (min-width:$tablet) {
+        align-items: center;
         // width: auto;
         // flex: 0 0 rem(358);
         // margin-bottom: 0;
-        padding-top: rem(50);
+        // padding-top: rem(50);
       }
     }
 
@@ -494,7 +498,7 @@ h3 {
     &_pleft {
       @media (min-width:$pcSmall){
         padding-left: rem(110);
-    }
+      }
     }
     
   }
@@ -549,8 +553,9 @@ h3 {
 
   &__text,
   &__list {
+    line-height: 1.38;
     font-size: rem(13);
-    @media (min-width:$tablet){
+    @media (min-width:$mobile){
       font-size: rem(16);
       line-height: 1.5;
     }
@@ -1155,10 +1160,10 @@ h3 {
   }
   // .phone-block__main-item
   &__main-item {
-    background: url("@img/common/back-mob.png");
+    background-image: url("@img/common/back-mob.png");
     background-size: cover;
     @media (min-width:$pcSmall){
-      background: url("@img/common/back-pc.png");
+      background-image: url("@img/common/back-pc.png");
     }
 
 
@@ -1174,7 +1179,6 @@ h3 {
       
       @media (min-width:$mobile){
         width: auto;
-        flex: 0 0 rem(358);
         width: rem(358);
         height: rem(497);
       }
@@ -1229,7 +1233,6 @@ h3 {
         }
       }
 
-
     }
 
 
@@ -1241,13 +1244,11 @@ h3 {
         width: rem(358);
         height: rem(497);
       }
-      
-      @media (min-width:$mobile){
-        width: auto;
-        flex: 0 0 rem(358);
-        margin-bottom: 0;
-      }
+      // @media (min-width:$mobile){
+      //   margin-bottom: 0;
+      // }
       @media (min-width:$tablet){
+        flex: 0 0 rem(358);
         .grid-num-item {
           min-height: rem(100);
           @media (min-width:$pcSmall){
@@ -1346,6 +1347,9 @@ h3 {
 
   // .phone-block__button
   &__button {
+    
+  }
+  .phone-block__button {
     font-weight: 400;
     font-size: rem(13);
     line-height: math.div(16,13);
@@ -1364,11 +1368,18 @@ h3 {
       border-radius: rem(20);
     }
   }
+  
 
 
   // .phone-block__grid-num
   &__grid-num {
-    
+    &_v2 {
+      @media (max-width:$tablet){
+        padding-top: rem(40);
+        padding-bottom: rem(50);
+      }
+      
+    }
   }
 
 }
@@ -1454,6 +1465,7 @@ h3 {
   &_two-col {
     grid-template-columns: 1fr 1fr;
     column-gap: var(--column-gap-mob);
+    row-gap: rem(20);
     // max-width: rem(290);
     @media (min-width:$mobileSmall){
       // max-width: rem(360);
@@ -1601,6 +1613,10 @@ h3 {
 .our-works {
   padding-top: rem(35);
   padding-bottom: rem(50);
+  @media (min-width:$tablet){
+    padding-top: rem(100);
+    padding-bottom: rem(100);
+  }
   // .our-works__container
   &__container {
   }
@@ -1641,11 +1657,12 @@ h3 {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: rem(24);
+    margin-top: rem(25);
     position: relative;
     min-height: rem(16);
     @media (min-width:$tablet){
-      min-height: rem(30); 
+      min-height: rem(30);
+      margin-top: rem(50);
     }
   }
 
@@ -1653,12 +1670,14 @@ h3 {
   &__navigation-btn {
     display: none;
     @media (min-width:$mobile) {
+      cursor: pointer;
       position: relative;
       // display: block;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex: 0 0 rem(500);
+      pointer-events: none;
     }
     @media (min-width:$tablet){
         flex-basis: rem(660);
@@ -1668,9 +1687,11 @@ h3 {
   // .our-works__btn
   &__btn {
     &_prev {
+      pointer-events: visible;
     }
 
     &_next {
+      pointer-events: visible;
       img {
         transform: rotate(180deg);
       }
@@ -1719,7 +1740,7 @@ h3 {
   // }
 
   &__pagination {
-    z-index: -1;
+    // z-index: -1;
     position: absolute;
     top: 0;
     left: 50%;
@@ -1736,6 +1757,7 @@ h3 {
 
     .swiper-pagination-bullet-active,
     .swiper-pagination-bullet {
+      cursor: pointer;
       position: relative;
       width: rem(15);
       height: rem(15);
@@ -1803,13 +1825,26 @@ h3 {
       padding: rem(30); 
     }
 
-
+    picture,
     img {
       width: 100%;
-      @media (min-width:$tablet){
-        max-width: rem(223.52); 
-      }
+      // @media (min-width:$tablet){
+      //   max-width: rem(223.52); 
+      // }
     }
     
+  }
+}
+
+.page_services {
+  @media (max-width:$mobile){
+    .cards__column:first-child {
+      padding-top: rem(30);
+    }
+    .card__image {
+      @media (max-width:$mobile){
+        padding: 0; 
+      }
+    }
   }
 }
